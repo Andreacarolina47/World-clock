@@ -18,6 +18,11 @@ nanjingDateElement.innerHTML = nanjingCurrent.format("dddd, MMMM Do YYYY");
 
 function updateCity (event){
     let cityTimeZone = event.target.value;
+    if (cityTimeZone === "current") {
+     
+    cityTimeZone = moment.tz.guess();  
+      
+    }
     let cityName = cityTimeZone.replace("_"," ").split("/")[1];
     let cityInformation = moment().tz(cityTimeZone);
 
