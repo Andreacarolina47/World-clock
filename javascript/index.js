@@ -14,6 +14,15 @@ let nanjingCurrent = moment().tz("Asia/Chongqing");
 
 nanjingTimeElement.innerHTML = nanjingCurrent.format("h:mm:ss [<small>]A[</small>]");
 nanjingDateElement.innerHTML = nanjingCurrent.format("dddd, MMMM Do YYYY");
+
+let romeElement = document.querySelector("#rome");
+let romeTimeElement = romeElement.querySelector(".time");
+let romeDateElement = romeElement.querySelector(".date");
+let romeCurrent = moment().tz("Europe/Rome");
+
+romeTimeElement.innerHTML = romeCurrent.format("h:mm:ss [<small>]A[</small>]");
+romeDateElement.innerHTML = romeCurrent.format("dddd, MMMM Do YYYY");
+
 }
 
 function updateCity (event){
