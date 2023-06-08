@@ -16,5 +16,27 @@ nanjingTimeElement.innerHTML = nanjingCurrent.format("h:mm:ss [<small>]A[</small
 nanjingDateElement.innerHTML = nanjingCurrent.format("dddd, MMMM Do YYYY");
 }
 
+function updateCity (event){
+    let cityTimeZone = event.target.value;
+    let cityName = cityTimeZone.replace("_"," ").split("/")[1];
+    let cityInformation = moment().tz(cityTimeZone);
+
+    let citiesElement = document.querySelector("#cities");
+    citiesElement.innerHTML = `
+    <div class="city">
+            <div>
+            <h2>${cityName}</h2>
+            <div class="date">${cityInformation.format("dddd, MMMM Do YYYY")}</div>
+        </div>
+            <div class="time">${cityInformation.format("h:mm:ss")} <small>${cityInformation.format("A")}</small></div>
+        </div>
+    `;
+}
+
+let selectCityElement = document.querySelector("#city");
+selectCityElement.addEventListener("change", updateCity);
+
 updateTimeDate();
 setInterval(updateTimeDate, 1000);
+
+
