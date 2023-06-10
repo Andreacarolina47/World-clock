@@ -1,18 +1,20 @@
 body{
-    background-color: #f9f7fe;
+    background: linear-gradient(96.2deg, rgb(255, 230, 112) 10.4%, rgb(255, 100, 100) 43.8%, rgb(0, 93, 219) 105.8%);
     font-family:'Averia Serif Libre', cursive;
     font-family: 'EB Garamond', serif; 
+   
 }
 
 .container {
     max-width: 600px;
     display: block;
     margin: 0 auto;
-    background-color: white;
+    background-color: #f5f4e8;
     padding: 20px 40px;
     margin-top: 70px;
     margin-bottom: 70px;
     border-radius: 50%;
+    
     
 }
 
