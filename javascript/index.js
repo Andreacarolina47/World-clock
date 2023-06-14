@@ -46,6 +46,9 @@ function updateCity (event){
         </div>
         <div class="link"><a href="/">Homepage</a></div>
     `;
+    setTimeout(() => {
+        updateCity(event);
+      }, 1000);
     
 }
 
